@@ -1,0 +1,16 @@
+[versions]
+org-jetbrains-kotlin = "1.9.24"
+org-springframework-boot = { prefer = "3.2.7" }
+kotlin-logging-jvm = "6.0.9"
+
+[libraries]
+javax-jaxb = { module = "javax.xml.bind:jaxb-api", version = "2.3.1" }
+bom-springboot = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "org-springframework-boot" }
+kotlin-logging-jvm = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging-jvm" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin" }
+kotlin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "org-jetbrains-kotlin" }
+kotlin-noarg = { id = "org.jetbrains.kotlin.plugin.noarg", version.ref = "org-jetbrains-kotlin" }
+kotlin-lombok = { id = "org.jetbrains.kotlin.plugin.lombok", version.ref = "org-jetbrains-kotlin" }
+springboot = { id = "org.springframework.boot", version.ref = "org-springframework-boot" }
